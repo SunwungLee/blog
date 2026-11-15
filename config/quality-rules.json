@@ -1,0 +1,11 @@
+{
+  "version": "0.1-provisional",
+  "note": "Phase_0_design.md 19절: 품질 기준은 미확정. 아래 값은 구현용 임시값이며 확정 시 이 파일만 바꾼다.",
+  "min_body_chars": 1500,
+  "max_platform_overlap": 0.6,
+  "max_master_overlap": 0.85,
+  "seo_max_body_growth": 0.1,
+  "max_unverified_ratio": {"default": 0.3, "finance": 0.1},
+  "low_engagement_ratio": 0.005,
+  "early_period_days": 7
+}

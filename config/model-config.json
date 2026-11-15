@@ -1,0 +1,23 @@
+{
+  "version": "1",
+  "note": "Phase_0_design.md 5.3. provider/model은 공급자 선정 후 어댑터 쪽 설정에서 지정한다. 코드에는 역할 이름만 쓴다.",
+  "models": {
+    "lightweight": {"provider": "<to-be-selected>", "model": "<to-be-selected>"},
+    "high_quality": {"provider": "<to-be-selected>", "model": "<to-be-selected>"}
+  },
+  "tasks": {
+    "keyword_classification": {"model": "lightweight"},
+    "content_planning": {"model": "high_quality"},
+    "master_article": {"model": "high_quality"},
+    "answer_analysis": {"model": "lightweight"},
+    "search_intent_analysis": {"model": "lightweight"},
+    "research_synthesis": {"model": "high_quality"},
+    "followup_question": {"model": "lightweight"},
+    "seo_review": {"model": "lightweight"},
+    "fact_checking": {"model": "high_quality"},
+    "platform_adaptation": {"model": "lightweight"},
+    "topic_discovery": {"model": "high_quality"},
+    "image_planning": {"model": "lightweight"},
+    "performance_analysis": {"model": "lightweight"}
+  }
+}

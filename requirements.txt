@@ -1,0 +1,31 @@
+# Requirements apply only to the user's designated personal/operations PC.
+# Install or configure tools there only when the user explicitly requests it.
+# This file is intentionally valid as a pip requirements file; environment
+# prerequisites are comments, and only the packages below are real pins.
+#
+# Required:
+# - Windows 10/11
+# - Python 3.12+ (developed and tested on 3.14; core code is standard-library only)
+# - Node.js 24.x with npm (supported by n8n 2.47.4)
+# - n8n 2.47.4 for local workflow development
+# - Git for Windows
+#
+# Optional:
+# - Docker Desktop only if an n8n development tunnel is later required
+#
+# Test run (no install needed): python -m unittest discover -s tests/unit
+# Run one skill:                python run_skill.py <skill-name> [--providers module] < request.json
+#
+# Application dependencies. The implemented skills, scripts and unit tests use
+# only the Python standard library. The packages below are needed only for the
+# features noted; versions are minimum floors to be pinned on the personal PC.
+
+# scripts/image-processor: pixel resizing (plan_resize needs no package)
+Pillow>=10.0
+
+# config/*.yaml loading (model, retry, quality settings) once config files are added
+PyYAML>=6.0
+
+# Provider adapters are intentionally NOT listed: the model and search provider
+# are not selected yet (Korean quality comparison pending). Add the chosen SDKs
+# or HTTP client here after selection. Do not store credentials here.
